@@ -11,21 +11,21 @@
 					v-model="group"
 					active-class="deep-purple--text text--accent-4"
 				>
-					<v-list-item>
+					<v-list-item @click="$router.push('/')">
 						<v-list-item-icon>
 							<v-icon>mdi-magnify</v-icon>
 						</v-list-item-icon>
 						<v-list-item-title>Search</v-list-item-title>
 					</v-list-item>
 
-					<v-list-item>
+					<v-list-item @click="$router.push('/learn-esg')">
 						<v-list-item-icon>
 							<v-icon>mdi-school</v-icon>
 						</v-list-item-icon>
 						<v-list-item-title>Learn about ESG</v-list-item-title>
 					</v-list-item>
 
-					<v-list-item @click="$router.push('about')">
+					<v-list-item @click="$router.push('/about')">
 						<v-list-item-icon>
 							<v-icon>mdi-information-outline</v-icon>
 						</v-list-item-icon>
@@ -34,8 +34,10 @@
 				</v-list-item-group>
 			</v-list>
 		</v-navigation-drawer>
-		<router-view />
-		<v-main> </v-main>
+
+		<v-main>
+			<router-view />
+		</v-main>
 	</v-app>
 </template>
 
