@@ -15,7 +15,14 @@
 						<v-list-item-icon>
 							<v-icon>mdi-magnify</v-icon>
 						</v-list-item-icon>
-						<v-list-item-title>Search</v-list-item-title>
+						<v-list-item-title>Search ESG data</v-list-item-title>
+					</v-list-item>
+
+					<v-list-item @click="$router.push('/summarise')">
+						<v-list-item-icon>
+							<v-icon>mdi-magnify</v-icon>
+						</v-list-item-icon>
+						<v-list-item-title>Summarise text</v-list-item-title>
 					</v-list-item>
 
 					<v-list-item @click="$router.push('/learn-esg')">
