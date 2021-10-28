@@ -80,6 +80,88 @@
 				</v-row>
 			</v-container>
 		</div>
+		<br /><br /><br />
+
+		<v-container class="">
+			<v-row>
+				<v-col class="text-center" cols="6">
+					<v-card>
+						<h3>
+							List of Best ESG Companies
+							<small class="caption"
+								>According to
+								<a
+									href="https://www.investors.com/news/esg-companies-list-best-esg-stocks-environmental-social-governance-values/"
+									target="_blank"
+									>Investors</a
+								></small
+							>
+						</h3>
+
+						<v-list-item>
+							<v-list-item-content>
+								<v-list-item-title>1. Microsoft MSFT</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item>
+							<v-list-item-content>
+								<v-list-item-title>2. Linde LIN</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item>
+							<v-list-item-content>
+								<v-list-item-title>3. Accenture ACN</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item>
+							<v-list-item-content>
+								<v-list-item-title>4. J.B.Hunt JBHT</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item>
+							<v-list-item-content>
+								<v-list-item-title>5. Xylem XYL</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item>
+							<v-list-item-content>
+								<v-list-item-title>6. Texas Instruments</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+					</v-card>
+				</v-col>
+				<v-col class="text-center" cols="6">
+					<v-card>
+						<h3>To learn more about ESG investing</h3>
+						<p class="text-h6">
+							<a
+								href="https://www.investopedia.com/terms/e/environmental-social-and-governance-esg-criteria.asp"
+								target="_blank"
+								>Investopedia</a
+							>
+							<br />
+							<a
+								href="https://www.fool.com/investing/stock-market/types-of-stocks/esg-investing/"
+								target="_blank"
+								>Motley Fool</a
+							>
+							<br />
+							<a
+								href="https://www.forbes.com/advisor/investing/esg-investing/"
+								target="_blank"
+								>Forbes</a
+							>
+							<br />
+							<a
+								href="https://www.cfainstitute.org/en/research/esg-investing"
+								target="_blank"
+								>CFA Institute</a
+							>
+						</p>
+					</v-card>
+				</v-col>
+			</v-row>
+		</v-container>
 	</v-app>
 </template>
 
