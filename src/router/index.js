@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
-import ESG from "../views/ESG.vue";
+// import ESG from "../views/ESG.vue";
 import Summary from "../views/Summary.vue";
 
 Vue.use(VueRouter);
@@ -23,11 +23,11 @@ const routes = [
 		name: "About",
 		component: About,
 	},
-	{
-		path: "/learn-esg",
-		name: "ESG",
-		component: ESG,
-	},
+	// {
+	// 	path: "/learn-esg",
+	// 	name: "ESG",
+	// 	component: ESG,
+	// },
 ];
 
 const router = new VueRouter({

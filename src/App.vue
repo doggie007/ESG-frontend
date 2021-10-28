@@ -2,7 +2,7 @@
 	<v-app>
 		<v-app-bar color="blue" dense dark absolute>
 			<v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-			<v-toolbar-title>ESG</v-toolbar-title>
+			<v-toolbar-title>Investures</v-toolbar-title>
 			<v-spacer></v-spacer>
 		</v-app-bar>
 		<v-navigation-drawer v-model="drawer" absolute temporary>
@@ -20,23 +20,23 @@
 
 					<v-list-item @click="$router.push('/summarise')">
 						<v-list-item-icon>
-							<v-icon>mdi-magnify</v-icon>
+							<v-icon>mdi-book-open</v-icon>
 						</v-list-item-icon>
 						<v-list-item-title>Summarise text</v-list-item-title>
 					</v-list-item>
 
-					<v-list-item @click="$router.push('/learn-esg')">
+					<!-- <v-list-item @click="$router.push('/learn-esg')">
 						<v-list-item-icon>
 							<v-icon>mdi-school</v-icon>
 						</v-list-item-icon>
 						<v-list-item-title>Learn about ESG</v-list-item-title>
-					</v-list-item>
+					</v-list-item> -->
 
 					<v-list-item @click="$router.push('/about')">
 						<v-list-item-icon>
 							<v-icon>mdi-information-outline</v-icon>
 						</v-list-item-icon>
-						<v-list-item-title>How this was made</v-list-item-title>
+						<v-list-item-title>About</v-list-item-title>
 					</v-list-item>
 				</v-list-item-group>
 			</v-list>
