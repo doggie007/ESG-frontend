@@ -45,7 +45,53 @@
 			<v-row>
 				<v-col>
 					<v-card height="300" align="center" justify="center">
-						<h2>Sustainalytics</h2>
+						<h2>
+							Sustainalytics
+							<span>
+								<v-dialog v-model="dialog1" width="500">
+									<template v-slot:activator="{ on, attrs }">
+										<v-btn icon color="primary" v-bind="attrs" v-on="on">
+											<v-icon dark> mdi-information-outline </v-icon>
+										</v-btn>
+									</template>
+									<v-card>
+										<v-card-title class="text-h5 grey lighten-2">
+											Sustainalytics
+										</v-card-title>
+
+										<v-card-text>
+											Scraped from
+											<a href="https://uk.finance.yahoo.com/" target="_blank"
+												>Yahoo Finance</a
+											>
+											which is provided by
+											<a
+												href="https://www.sustainalytics.com/esg-data"
+												target="_blank"
+												>Sustainalytics</a
+											>. <br />
+											The final ESG risk rating scores are a measure of
+											unmanaged risk on an absolute scale of 0-100, with a lower
+											score signalling less unmanaged ESG risk.
+											<img
+												src="../assets/sustainalytics_ratings.png"
+												alt="Sustainalytics ratings image"
+											/>
+										</v-card-text>
+
+										<v-divider></v-divider>
+
+										<v-card-actions>
+											<v-spacer></v-spacer>
+											<v-btn color="primary" text @click="dialog1 = false">
+												CLOSE
+											</v-btn>
+										</v-card-actions>
+									</v-card>
+								</v-dialog>
+							</span>
+						</h2>
+						<hr />
 
 						<p v-if="yahoo == null">No data available</p>
 						<v-col v-else justify="center">
@@ -82,7 +128,56 @@
 				</v-col>
 				<v-col>
 					<v-card height="300" align="center" justify="center">
-						<h2>Enterprise API</h2>
+						<h2>
+							Enterprise API
+							<span>
+								<v-dialog v-model="dialog2" width="500">
+									<template v-slot:activator="{ on, attrs }">
+										<v-btn icon color="primary" v-bind="attrs" v-on="on">
+											<v-icon dark> mdi-information-outline </v-icon>
+										</v-btn>
+									</template>
+									<v-card>
+										<v-card-title class="text-h5 grey lighten-2">
+											ESG Enterprise
+										</v-card-title>
+
+										<v-card-text>
+											Calls an API hosted on
+											<a
+												href="https://rapidapi.com/esg.enterprise.app/api/esg-environmental-social-governance-data/"
+												target="_blank"
+												>RapidAPI</a
+											>
+											which supplied data from
+											<a href="https://www.esgenterprise.com/" target="_blank"
+												>ESG Enterprise</a
+											>.
+											<br />
+											Details of how the scores are calculated can be found
+											<a
+												href="https://app.esgenterprise.com/uploads/ESG-Enterprise-Risk-Ratings-MethodologyV3.pdf"
+												target="_blank"
+												>here</a
+											>.
+											<br />
+											A higher grade indicates less unmanaged risk and a high
+											degree of transparency in reporting material.
+										</v-card-text>
+
+										<v-divider></v-divider>
+
+										<v-card-actions>
+											<v-spacer></v-spacer>
+											<v-btn color="primary" text @click="dialog2 = false">
+												CLOSE
+											</v-btn>
+										</v-card-actions>
+									</v-card>
+								</v-dialog>
+							</span>
+						</h2>
+						<hr />
 						<p v-if="enterprise == null">No data available</p>
 						<v-col v-else>
 							<v-row align="center" justify="center"
@@ -154,7 +249,47 @@
 				</v-col>
 				<v-col>
 					<v-card height="300" align="center" justify="center">
-						<h2>Sustainable.com</h2>
+						<h2>
+							Sustainable.com
+							<span>
+								<v-dialog v-model="dialog3" width="500">
+									<template v-slot:activator="{ on, attrs }">
+										<v-btn icon color="primary" v-bind="attrs" v-on="on">
+											<v-icon dark> mdi-information-outline </v-icon>
+										</v-btn>
+									</template>
+									<v-card>
+										<v-card-title class="text-h5 grey lighten-2">
+											Sustainable
+										</v-card-title>
+
+										<v-card-text>
+											Scrapes data from
+											<a href="https://www.sustainable.com/" target="_blank"
+												>Sustainable</a
+											>
+											.
+											<br />
+											The overall score is a weighted average of different
+											companies' evaluations.
+											<br />
+											Scores range from 0-100 and the higher the score the
+											better.
+										</v-card-text>
+
+										<v-divider></v-divider>
+
+										<v-card-actions>
+											<v-spacer></v-spacer>
+											<v-btn color="primary" text @click="dialog3 = false">
+												CLOSE
+											</v-btn>
+										</v-card-actions>
+									</v-card>
+								</v-dialog>
+							</span>
+						</h2>
+						<hr />
 						<p v-if="sustainable == null">No data available</p>
 						<v-col v-else align="center" justify="center">
 							<v-row align="center" justify="center"
@@ -210,6 +345,9 @@ export default {
 		returned: false,
 		enterprise: null,
 		sustainable: null,
+		dialog1: false,
+		dialog2: false,
+		dialog3: false,
 	}),
 	methods: {
 		sleep(ms) {
@@ -288,5 +426,8 @@ export default {
 <style scoped>
 span::after {
 	content: " ";
+}
+img {
+	max-width: 100%;
 }
 </style>
